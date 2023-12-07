@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="cursor"></div>
     <div id="nav-bar">
-    <div id="logo">Sahitya</div>
-    <div id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <script src="script.js"></script>
+        <div id="logo">sahitya.github.io</div>
+        <div id="hamburger">
+            <svg id="ham-menu" viewBox="0 0 100 100" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="62" width="60" height="8" rx="4" fill="black" />
+                <rect x="20" y="30" width="60" height="8" rx="4" fill="black" />
+                <rect x="20" y="46" width="60" height="8" rx="4" fill="black" />
+            </svg>
+            <div id="panel">
+                <div class="tag">
+                    <a href="#" class="panel-links">
+                        Home
+                    </a>
+                </div>
+                <div class="tag">
+                    <a href="#" class="panel-links">
+                        About
+                    </a>
+                </div>
+                <div class="tag">
+                    <a href="#" class="panel-links">
+                        Projects
+                    </a>
+                </div>
+                <div class="tag">
+                    <a href="#" class="panel-links">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        <ul id="nav-links">
+            <li id="link1" class="links">
+                <div id="slider1" class="slider"></div><a class="anchor-links" href="#">Home</a>
+            </li>
+            <li id="link2" class="links">
+                <div id="slider2" class="slider"></div><a class="anchor-links" href="#">About</a>
+            </li>
+            <li id="link3" class="links">
+                <div id="slider3" class="slider"></div><a class="anchor-links" href="#">Projects</a>
+            </li>
+            <li id="link4" class="links">
+                <div id="slider4" class="slider"></div><a class="anchor-links" href="#">Contact Me</a>
+            </li>
+        </ul>
     </div>
-    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
