@@ -21,6 +21,7 @@ for (let i = 1; i <= 4; i++) {
       document.querySelectorAll("rect").forEach(function (rect) {
         rect.style.fill = "white";
       });
+      document.getElementById("overlay").style.display = "block";
       panelFlag = true;
     } else {
       document.getElementById("panel").style.transform = "translateX(80%)";
@@ -28,6 +29,7 @@ for (let i = 1; i <= 4; i++) {
       document.querySelectorAll("rect").forEach(function (rect) {
         rect.style.fill = "#000";
       });
+      document.getElementById("overlay").style.display = "none";
       panelFlag = false;
     }
   });
