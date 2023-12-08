@@ -28,6 +28,7 @@ a{
     list-style: none;
     cursor: pointer;
     scrollbar-width: 0px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #nav-bar{
