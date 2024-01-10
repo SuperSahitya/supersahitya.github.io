@@ -53,11 +53,6 @@ a{
     transition: all 0.2s ease;
 }
 
-#logo:hover{
-    background: url("speed.gif");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 #nav-links{
     /* background-color: var(--fav-color); */
     display: flex;
