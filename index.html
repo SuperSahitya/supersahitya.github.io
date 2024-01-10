@@ -21,30 +21,35 @@
     <div id="nav-bar">
         <div id="logo">//supersahitya</div>
         <div id="hamburger">
-            <svg id="ham-menu" viewBox="0 0 100 100" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <svg class="theThing" id="ham-menu" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="20" y="62" width="60" height="8" rx="4" fill="black" />
                 <rect x="20" y="30" width="60" height="8" rx="4" fill="black" />
                 <rect x="20" y="46" width="60" height="8" rx="4" fill="black" />
             </svg>
+            <svg class="theThing" id="cross" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="31.6152" y="25.9584" width="60" height="8" rx="4" transform="rotate(45 31.6152 25.9584)"
+                    fill="black" />
+                <rect x="25.9584" y="68.3848" width="60" height="8" rx="4" transform="rotate(-45 25.9584 68.3848)"
+                    fill="black" />
+            </svg>
             <div id="panel">
-                <div class="tag">
-                    <a href="#" class="panel-links">
+                <div class="tag" id="nav-home">
+                    <a href="#home" class="panel-links">
                         Home
                     </a>
                 </div>
-                <div class="tag">
-                    <a href="#" class="panel-links">
+                <div class="tag" id="nav-about">
+                    <a href="#about" class="panel-links">
                         About
                     </a>
                 </div>
-                <div class="tag">
-                    <a href="#" class="panel-links">
+                <div class="tag" id="nav-projects">
+                    <a href="#projects" class="panel-links">
                         Projects
                     </a>
                 </div>
-                <div class="tag">
-                    <a href="#" class="panel-links">
+                <div class="tag" id="nav-contact">
+                    <a href="#contact" class="panel-links">
                         Contact Me
                     </a>
                 </div>
@@ -52,20 +57,23 @@
         </div>
         <ul id="nav-links">
             <li id="link1" class="links">
-                <div id="slider1" class="slider"></div><a class="anchor-links" href="#">Home</a>
+                <div id="slider1" class="slider"></div><a class="anchor-links" href="#home">Home</a>
             </li>
             <li id="link2" class="links">
-                <div id="slider2" class="slider"></div><a class="anchor-links" href="#">About</a>
+                <div id="slider2" class="slider"></div><a class="anchor-links" href="#about">About</a>
             </li>
             <li id="link3" class="links">
-                <div id="slider3" class="slider"></div><a class="anchor-links" href="#">Projects</a>
+                <div id="slider3" class="slider"></div><a class="anchor-links" href="#projects">Projects</a>
             </li>
             <li id="link4" class="links">
-                <div id="slider4" class="slider"></div><a class="anchor-links" href="#">Contact Me</a>
+                <div id="slider4" class="slider"></div><a class="anchor-links" href="#contact">Contact Me</a>
             </li>
         </ul>
     </div>
+    <div class="page" id="home"></div>
+    <div class="page" id="about"></div>
+    <div class="page" id="projects"></div>
+    <div class="page" id="contact"></div>
     <script src="script.js"></script>
 </body>
-
 </html>
