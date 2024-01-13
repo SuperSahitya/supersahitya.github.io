@@ -101,7 +101,7 @@ document.addEventListener("mouseout",()=>{
   cursor.style.opacity = 0;
 })
 
-const homeContainer = document.getElementById("home-container");
+const homeContainer = document.getElementById("home-text");
 homeContainer.addEventListener("mouseover",()=>{
   increaseCursorSize(homeContainer,150);
 })
