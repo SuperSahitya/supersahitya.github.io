@@ -106,15 +106,10 @@ homeContainer.addEventListener("mouseover",()=>{
   increaseCursorSize(homeContainer,150);
 })
 
-// const nameText = document.getElementById("name");
-// nameText.addEventListener("mouseover",()=>{
-//   increaseCursorSize(nameText,200);
-// })
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const myName = document.getElementById("name");
 
-function rnd2() {
+function generateRandomLetters() {
   let iteration = 0;
   const interval = setInterval(() => {
     myName.innerText = myName.innerText
@@ -133,4 +128,4 @@ function rnd2() {
   }, 30);
 }
  
-rnd2();
+generateRandomLetters();
