@@ -22,6 +22,12 @@ document.getElementById("hamburger").addEventListener("click", function () {
   switchPanel();
 });
 
+window.addEventListener('scroll', function() {
+  if (panelFlag) {
+      switchPanel();
+  }
+});
+
 document.body.addEventListener("click", function (event) {
   if (event.target.tagName.toLowerCase() === "a") {
     const targetId = event.target.getAttribute("href").slice(1);
@@ -56,6 +62,7 @@ function switchPanel() {
     panelFlag = false;
   }
 }
+
 document.getElementById("overlay").addEventListener("click", () => {
   switchPanel();
 });
