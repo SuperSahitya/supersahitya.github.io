@@ -1,2 +1,3 @@
-<h1>Portfolio</h1><br>
-<h4>Developer: Sahitya Kumar Choubey</h4>
+<h3>Portfolio</h3>
+<a href="https://supersahitya.github.io/">A personal portfolio developed with ❤️</a><br>
+Author - Sahitya Kumar Choubey
