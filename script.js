@@ -22,9 +22,9 @@ document.getElementById("hamburger").addEventListener("click", function () {
   switchPanel();
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function () {
   if (panelFlag) {
-      switchPanel();
+    switchPanel();
   }
 });
 
@@ -34,7 +34,7 @@ document.body.addEventListener("click", function (event) {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       event.preventDefault();
-      targetElement.scrollIntoView();
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
   }
 });
@@ -50,6 +50,7 @@ function switchPanel() {
     document.getElementById("cross").style.display = "block";
     document.getElementById("overlay").style.display = "block";
     panelFlag = true;
+    animatePanelLinks();
   } else {
     document.getElementById("panel").style.transform = "translateX(80%)";
     document.querySelector("#hamburger").style.backgroundColor = "white";
@@ -77,7 +78,7 @@ document.addEventListener("mousemove", (e) => {
   let xAxis = e.clientX;
   let yAxis = e.clientY;
   let shift = Number(cursorWidth.slice(0, -2)) * 0.5;
-  cursor.style.transform = `translate(${xAxis - shift }px, ${yAxis - shift}px)`;
+  cursor.style.transform = `translate(${xAxis - shift}px, ${yAxis - shift}px)`;
 });
 
 document.querySelectorAll(".links").forEach((link) => {
@@ -91,7 +92,7 @@ document.querySelectorAll(".links").forEach((link) => {
   });
 });
 
-function increaseCursorSize(link,size) {
+function increaseCursorSize(link, size) {
   link.addEventListener("mouseover", () => {
     cursor.style.height = `${size}px`;
     cursor.style.width = `${size}px`;
@@ -102,16 +103,16 @@ function increaseCursorSize(link,size) {
   });
 }
 const logo = document.getElementById("logo");
-increaseCursorSize(logo,100);
+increaseCursorSize(logo, 100);
 
-document.addEventListener("mouseout",()=>{
+document.addEventListener("mouseout", () => {
   cursor.style.opacity = 0;
-})
+});
 
 const homeContainer = document.getElementById("home-text");
-homeContainer.addEventListener("mouseover",()=>{
-  increaseCursorSize(homeContainer,150);
-})
+homeContainer.addEventListener("mouseover", () => {
+  increaseCursorSize(homeContainer, 150);
+});
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const myName = document.getElementById("name");
@@ -134,5 +135,59 @@ function generateRandomLetters() {
     iteration += 1 / 8;
   }, 30);
 }
- 
+
 generateRandomLetters();
+
+let tl = gsap.timeline();
+
+tl.from(".links", {
+  y: -50,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.2,
+  ease: "elastic.out(0.8, 0.3)",
+});
+
+gsap.from(".skill-box", {
+  scrollTrigger: "#skills",
+  y: -20,
+  opacity: 0,
+  duration: 0.2,
+  stagger: 0.1,
+  // ease: "elastic.out(0.8, 0.3)"
+});
+
+let projectElements = document.querySelectorAll(".project");
+let projectCount = projectElements.length;
+
+gsap.to(".project", {
+  xPercent: -100 * (projectCount - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#projects",
+    pin: true,
+    endTrigger: "#project3",
+    end: "right",
+    scrub: 1,
+    snap: {
+      snapTo: (value) => {
+        let closest =
+          Math.round(value * (projectCount - 1)) / (projectCount - 1);
+        return closest;
+      },
+      duration: { min: 0.2, max: 0.3 },
+      ease: "power1.inOut",
+    },
+    end: () => "+=" + document.querySelector("#projects").offsetWidth,
+  },
+});
+
+function animatePanelLinks() {
+  gsap.from(".panel-links", {
+    y: -40,
+    opacity: 0,
+    duration: 0.3,
+    stagger: 0.1,
+    // ease: "elastic.out(0.8, 0.3)"
+  });
+}
