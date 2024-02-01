@@ -358,10 +358,10 @@ a {
     margin-bottom: 5vh;
     padding: 30px;
   }
-  #me{
+  #me {
     display: none;
   }
-  .footer-icon{
+  .footer-icon {
     font-size: 0.7rem;
   }
 }
@@ -391,11 +391,11 @@ a {
   background-color: black;
   color: white;
   border-radius: 10px;
-  /* transition: all 0.3s ease-out; */ 
+  /* transition: all 0.3s ease-out; */
   /*adding transition will hinder gsap*/
 }
 
-.skill-box:hover{
+.skill-box:hover {
   /* transform: scale(2); */
   background-color: rgb(174, 174, 174);
   color: black;
@@ -564,13 +564,17 @@ input.invalid::placeholder {
   color: red;
 }
 
-#about-heading-div{
+textarea.invalid::placeholder {
+  color: red;
+}
+
+#about-heading-div {
   overflow: hidden;
 }
-#about-heading{
+#about-heading {
   font-size: 2rem;
 }
-#footer-container{
+#footer-container {
   margin-top: auto;
   width: 100%;
   overflow: hidden;
