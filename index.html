@@ -57,16 +57,16 @@
             </div>
         </div>
         <ul id="nav-links">
-            <li id="link1" class="links">
+            <li id="link1" class="links" data-slider="slider1">
                 <div id="slider1" class="slider"></div><a class="anchor-links" href="#home">Home</a>
             </li>
-            <li id="link2" class="links">
+            <li id="link2" class="links" data-slider="slider2">
                 <div id="slider2" class="slider"></div><a class="anchor-links" href="#about">About</a>
             </li>
-            <li id="link3" class="links">
+            <li id="link3" class="links" data-slider="slider3">
                 <div id="slider3" class="slider"></div><a class="anchor-links" href="#projects">Projects</a>
             </li>
-            <li id="link4" class="links">
+            <li id="link4" class="links" data-slider="slider4">
                 <div id="slider4" class="slider"></div><a class="anchor-links" href="#contact">Contact</a>
             </li>
         </ul>
@@ -89,7 +89,9 @@
         </div>
     </div>
     <div class="page" id="about">
-        <h1 id="about-heading">About Me</h1>
+        <div id="about-heading-div">
+            <h1 id="about-heading">ABOUT ME</h1>
+        </div>
         <div id="about-me">Versatile Full Stack Developer with expertise in the MERN stack.</div>
         <h3 id="about-skills">Skills</h3>
         <div id="skills">
@@ -114,7 +116,46 @@
         <div class="project" id="project2"></div>
         <div class="project" id="project3"></div>
     </div>
-    <div class="page" id="contact"></div>
+    <div class="page" id="contact">
+        <div id="contact-form">
+            <h1 id="form-heading">Get In Touch</h1>
+            <!-- <form id="form" action="https://formspree.io/f/xleqjraa" method="post"> -->
+            <form id="form">
+                <div id="name-div" class="form-div">
+                    <label class="form-label" for="contact-name">Name</label>
+                    <input name="name" id="contact-name" class="form-input" type="text" placeholder="Penguin Bonaparte">
+                </div>
+                <div id="email-div" class="form-div">
+                    <label class="form-label" for="contact-email">Email</label>
+                    <input name="email" id="contact-email" class="form-input" type="text"
+                        placeholder="bonaparte@penguin.snow">
+                </div>
+                <div id="message-div" class="form-div">
+                    <label class="form-label" for="contact-message">Message</label>
+                    <textarea name="message" id="contact-message" class="form-input"
+                        placeholder="I want your immediate assistance to conquer Mars"></textarea>
+                </div>
+                <button id="form-submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="footer-container">
+            <div id="footer">
+                <div id="footer-icons">
+                    <a href="https://www.linkedin.com/in/sahitya-kumar-choubey" target="_blank">
+                        <i id="linkedin-footer-icon" class="fa-brands fa-linkedin footer-icon"></i>
+                    </a>
+                    <a href="https://github.com/SuperSahitya" target="_blank">
+                        <i id="github-footer-icon" class="fa-brands fa-square-github footer-icon"></i>
+                    </a>
+                    <a href="mailto:@sahityakumarchoubey@gmail.com" target="_blank">
+                        <i id="mail-footer-icon" class="fa-regular fa-envelope footer-icon"></i>
+                    </a>
+                    <div id="copyright">&copy; 2024 Sahitya Kumar Choubey</div>
+                </div>
+                <div id="me">Made with <i class="far fa-heart heart"></i></div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>

@@ -1,16 +1,16 @@
-for (let i = 1; i <= 4; i++) {
-  document
-    .getElementById(`link${i}`)
-    .addEventListener("mouseover", function () {
-      var slider = document.getElementById(`slider${i}`);
-      slider.style.width = "100%";
-    });
+const navLinks = document.querySelectorAll(".links");
+navLinks.forEach((link)=>{
+  var sliderID = link.dataset.slider;
+  var sliderElement = document.getElementById(`${sliderID}`);
 
-  document.getElementById(`link${i}`).addEventListener("mouseout", function () {
-    var slider = document.getElementById(`slider${i}`);
-    slider.style.width = "0%";
+  link.addEventListener('mouseover', function() {
+    sliderElement.style.width = '100%';
   });
-}
+
+  link.addEventListener('mouseout', function() {
+    sliderElement.style.width = '0%';
+  });
+})
 
 let panelFlag = false;
 const home = document.getElementById("home");
@@ -191,3 +191,97 @@ function animatePanelLinks() {
     // ease: "elastic.out(0.8, 0.3)"
   });
 }
+document.querySelector(".heart").addEventListener("click", function () {
+  this.classList.add("fas");
+});
+
+var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+document.querySelector("#form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  var name = document.querySelector("#contact-name").value;
+  var email = document.querySelector("#contact-email").value;
+  var message = document.querySelector("#contact-message").value;
+  var nameInput = document.querySelector("#contact-name");
+  var emailInput = document.querySelector("#contact-email");
+  var messageInput = document.querySelector("#contact-message");
+
+  if (name === "") {
+    nameInput.placeholder = "Please Enter Your Name";
+    nameInput.classList.add("invalid");
+    nameInput.focus();
+    return;
+  }
+
+  if (email === "") {
+    emailInput.placeholder = "Please Enter Your Email";
+    emailInput.classList.add("invalid");
+    emailInput.focus();
+    return;
+  }
+
+  if (!emailRegex.test(email)) {
+    emailInput.value = "";
+    emailInput.placeholder = "Please Enter Valid Email";
+    emailInput.classList.add("invalid");
+    emailInput.focus();
+    return;
+  }
+
+  if (message === "") {
+    messageInput.placeholder = "Please Enter Your Message";
+    messageInput.classList.add("invalid");
+    messageInput.focus();
+    return;
+  }
+
+  this.submit();
+});
+
+
+const aboutHeading = document.getElementById("about-heading");
+increaseCursorSize(aboutHeading,100)
+
+const aboutMe = document.getElementById("about-me");
+increaseCursorSize(aboutMe,120)
+
+const skillHeading = document.getElementById("about-skills");
+increaseCursorSize(skillHeading,100)
+
+const skillSection = document.getElementById("skills");
+increaseCursorSize(skillSection,0)
+
+const labels = document.querySelectorAll(".form-label");
+labels.forEach((l)=>{
+  increaseCursorSize(l,80)
+})
+
+const contactHeading = document.getElementById("form-heading");
+increaseCursorSize(contactHeading,100)
+
+const submitButton = document.getElementById("form-submit");
+increaseCursorSize(submitButton,150)
+
+
+const footerIcons = document.querySelectorAll(".footer-icon");
+footerIcons.forEach((f)=>{
+  increaseCursorSize(f,100)
+})
+
+const copyright = document.getElementById("copyright");
+increaseCursorSize(copyright,100)
+
+const me = document.getElementById("me")
+increaseCursorSize(me,0)
+
+gsap.from("#about-heading",{
+  y: 100,
+  duration: 0.5,
+  scrollTrigger: "#about-me"
+})
+gsap.from("#footer",{
+  y: 150,
+  duration: 0.8,
+  scrollTrigger: "#footer-container"
+})
