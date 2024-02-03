@@ -1,16 +1,16 @@
 const navLinks = document.querySelectorAll(".links");
-navLinks.forEach((link)=>{
+navLinks.forEach((link) => {
   var sliderID = link.dataset.slider;
   var sliderElement = document.getElementById(`${sliderID}`);
 
-  link.addEventListener('mouseover', function() {
-    sliderElement.style.width = '100%';
+  link.addEventListener("mouseover", function () {
+    sliderElement.style.width = "100%";
   });
 
-  link.addEventListener('mouseout', function() {
-    sliderElement.style.width = '0%';
+  link.addEventListener("mouseout", function () {
+    sliderElement.style.width = "0%";
   });
-})
+});
 
 let panelFlag = false;
 const home = document.getElementById("home");
@@ -143,9 +143,9 @@ let tl = gsap.timeline();
 tl.from(".links", {
   y: -50,
   opacity: 0,
-  duration: 0.5,
+  duration: 0.4,
   stagger: 0.2,
-  ease: "elastic.out(0.8, 0.3)",
+  ease: "elastic.out(0.6, 0.3)",
 });
 
 gsap.from(".skill-box", {
@@ -176,7 +176,7 @@ gsap.to(".project", {
         return closest;
       },
       duration: { min: 0.2, max: 0.3 },
-      ease: "power1.inOut",
+      // ease: "power1.inOut",
     },
     end: () => "+=" + document.querySelector("#projects").offsetWidth,
   },
@@ -208,14 +208,22 @@ document.querySelector("#form").addEventListener("submit", function (event) {
   var messageInput = document.querySelector("#contact-message");
 
   if (name === "") {
-    nameInput.placeholder = "Please Enter Your Name";
+    nameInput.placeholder = "Don't Be Shy! Please Enter Your Name";
+    nameInput.classList.add("invalid");
+    nameInput.focus();
+    return;
+  }
+
+  if (name.length < 3) {
+    nameInput.value = "";
+    nameInput.placeholder = "Both Of Us Know That's Not Your Name";
     nameInput.classList.add("invalid");
     nameInput.focus();
     return;
   }
 
   if (email === "") {
-    emailInput.placeholder = "Please Enter Your Email";
+    emailInput.placeholder = "Seems Like You Forgot To Enter Email";
     emailInput.classList.add("invalid");
     emailInput.focus();
     return;
@@ -223,65 +231,86 @@ document.querySelector("#form").addEventListener("submit", function (event) {
 
   if (!emailRegex.test(email)) {
     emailInput.value = "";
-    emailInput.placeholder = "Please Enter Valid Email";
+    emailInput.placeholder = "Both Of Us Know That's Not A Real Email";
     emailInput.classList.add("invalid");
     emailInput.focus();
     return;
   }
 
   if (message === "") {
-    messageInput.placeholder = "Please Enter Your Message";
+    messageInput.placeholder = "You Forgot To Enter The Message";
+    messageInput.classList.add("invalid");
+    messageInput.focus();
+    return;
+  } else if (message.length < 12) {
+    messageInput.value = "";
+    messageInput.placeholder =
+      "Don't you think this message was way too short?";
     messageInput.classList.add("invalid");
     messageInput.focus();
     return;
   }
-
   this.submit();
 });
 
-
 const aboutHeading = document.getElementById("about-heading");
-increaseCursorSize(aboutHeading,100)
+increaseCursorSize(aboutHeading, 100);
 
 const aboutMe = document.getElementById("about-me");
-increaseCursorSize(aboutMe,120)
+increaseCursorSize(aboutMe, 120);
 
 const skillHeading = document.getElementById("about-skills");
-increaseCursorSize(skillHeading,100)
+increaseCursorSize(skillHeading, 100);
 
 const skillSection = document.getElementById("skills");
-increaseCursorSize(skillSection,0)
+increaseCursorSize(skillSection, 0);
 
 const labels = document.querySelectorAll(".form-label");
-labels.forEach((l)=>{
-  increaseCursorSize(l,80)
-})
+labels.forEach((l) => {
+  increaseCursorSize(l, 80);
+});
 
 const contactHeading = document.getElementById("form-heading");
-increaseCursorSize(contactHeading,100)
+increaseCursorSize(contactHeading, 100);
 
 const submitButton = document.getElementById("form-submit");
-increaseCursorSize(submitButton,150)
-
+increaseCursorSize(submitButton, 150);
 
 const footerIcons = document.querySelectorAll(".footer-icon");
-footerIcons.forEach((f)=>{
-  increaseCursorSize(f,100)
-})
+footerIcons.forEach((f) => {
+  increaseCursorSize(f, 100);
+});
 
 const copyright = document.getElementById("copyright");
-increaseCursorSize(copyright,100)
+increaseCursorSize(copyright, 100);
 
-const me = document.getElementById("me")
-increaseCursorSize(me,0)
+const me = document.getElementById("me");
+increaseCursorSize(me, 0);
 
-gsap.from("#about-heading",{
+gsap.from("#about-heading", {
   y: 100,
   duration: 0.5,
-  scrollTrigger: "#about-me"
-})
-gsap.from("#footer",{
+  scrollTrigger: "#about-me",
+});
+gsap.from("#footer", {
   y: 150,
   duration: 0.8,
-  scrollTrigger: "#footer-container"
-})
+  scrollTrigger: "#footer-container",
+});
+
+gsap.from("#logo", {
+  y: 40,
+  duration: 0.6,
+});
+
+gsap.from("#form-heading", {
+  y: 40,
+  duration: 0.5,
+  scrollTrigger: "#form",
+});
+
+gsap.from("#form-submit", {
+  y: 70,
+  duration: 0.5,
+  scrollTrigger: "#form-submit",
+});

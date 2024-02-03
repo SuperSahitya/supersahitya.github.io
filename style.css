@@ -126,6 +126,10 @@ a {
   z-index: 0;
 }
 
+#logo-container {
+  overflow: hidden;
+}
+
 #slider .active {
   position: absolute;
   left: 0px;
@@ -397,8 +401,8 @@ a {
 
 .skill-box:hover {
   /* transform: scale(2); */
-  background-color: rgb(174, 174, 174);
-  color: black;
+  text-shadow: 0px 0px 3.5px white;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.851);
 }
 
 #projects {
@@ -419,16 +423,16 @@ a {
   scroll-snap-type: proximity;
 }
 #project1 {
-  background-color: #f7567c;
+  /* background-color: #f7567c; */
   top: 0;
   left: 0;
 }
 #project2 {
-  background-color: #71a9f7;
+  /* background-color: #71a9f7; */
   left: 100%;
 }
 #project3 {
-  background-color: bisque;
+  /* background-color: bisque; */
   left: 200%;
 }
 
@@ -577,5 +581,21 @@ textarea.invalid::placeholder {
 #footer-container {
   margin-top: auto;
   width: 100%;
+  overflow: hidden;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+#contact-head-container{
+  overflow: hidden;
+}
+
+#submit-button-container{
   overflow: hidden;
 }

@@ -20,7 +20,9 @@
     <div id="cursor"></div>
     <div id="overlay"></div>
     <div id="nav-bar">
-        <div id="logo">//supersahitya</div>
+        <div id="logo-container">
+            <div id="logo">//supersahitya</div>
+        </div>
         <div id="hamburger">
             <svg class="theThing" id="ham-menu" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="20" y="62" width="60" height="8" rx="4" fill="black" />
@@ -78,10 +80,11 @@
                 I am<br>
                 <span id="name" data-value="SAHITYA">SAHITYA</span><br>
                 <span id="identity">I am a Full Stack Developer.</span><br>
-                <div id="icons"><a href="https://github.com/SuperSahitya" target="_blank">
+                <div id="icons"><a class="icon-container-link" href="https://github.com/SuperSahitya" target="_blank">
                         <i id="github-icon" class="fa-brands fa-square-github link-icons"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/sahitya-kumar-choubey" target="_blank">
+                    <a class="icon-container-link" href="https://www.linkedin.com/in/sahitya-kumar-choubey"
+                        target="_blank">
                         <i id="linkedin-icon" class="fa-brands fa-linkedin link-icons"></i>
                     </a>
                 </div>
@@ -109,18 +112,26 @@
             <div class="skill-box">PWAs</div>
             <div class="skill-box">Git</div>
             <div class="skill-box">Github</div>
+            <!-- <div class="skill-box">React Native</div> -->
         </div>
     </div>
     <div class="page" id="projects">
-        <div class="project" id="project1"></div>
-        <div class="project" id="project2"></div>
-        <div class="project" id="project3"></div>
+        <div class="project" id="project1">
+            <div class="project-page">Work In Progress ...</div>
+        </div>
+        <div class="project" id="project2">
+            <div class="project-page">Work In Progress ...</div>
+        </div>
+        <div class="project" id="project3">
+            <div class="project-page">Work In Progress ...</div>
+        </div>
     </div>
     <div class="page" id="contact">
         <div id="contact-form">
-            <h1 id="form-heading">Get In Touch</h1>
-            <!-- <form id="form" action="https://formspree.io/f/xleqjraa" method="post"> -->
-            <form id="form">
+            <div id="contact-head-container">
+                <h1 id="form-heading">Get In Touch</h1>
+            </div>
+            <form id="form" action="https://formspree.io/f/xleqjraa" method="post">
                 <div id="name-div" class="form-div">
                     <label class="form-label" for="contact-name">Name</label>
                     <input name="name" id="contact-name" class="form-input" type="text" placeholder="Penguin Bonaparte">
@@ -135,7 +146,7 @@
                     <textarea name="message" id="contact-message" class="form-input"
                         placeholder="I want your immediate assistance to conquer Mars"></textarea>
                 </div>
-                <button id="form-submit" type="submit">Submit</button>
+                <div id="submit-button-container"><button id="form-submit" type="submit">Submit</button></div>
             </form>
         </div>
         <div id="footer-container">
