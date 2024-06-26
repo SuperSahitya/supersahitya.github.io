@@ -191,9 +191,9 @@ function animatePanelLinks() {
     // ease: "elastic.out(0.8, 0.3)"
   });
 }
-document.querySelector(".heart").addEventListener("click", function () {
-  this.classList.add("fas");
-});
+// document.querySelector(".heart").addEventListener("click", function () {
+//   this.classList.add("fas");
+// });
 
 var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -292,16 +292,17 @@ gsap.from("#about-heading", {
   duration: 0.5,
   scrollTrigger: "#about-me",
 });
-gsap.from("#footer", {
-  y: 150,
-  duration: 0.8,
-  scrollTrigger: "#footer-container",
-});
 
-gsap.from("#logo", {
-  y: 40,
-  duration: 0.6,
-});
+// gsap.from("#footer", {
+//   y: 150,
+//   duration: 0.8,
+//   scrollTrigger: "#footer-container",
+// });
+
+// gsap.from("#logo", {
+//   y: 40,
+//   duration: 0.6,
+// });
 
 gsap.from("#form-heading", {
   y: 40,

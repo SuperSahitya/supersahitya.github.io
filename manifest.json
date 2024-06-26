@@ -1,0 +1,21 @@
+{
+  "short_name": "Portfolio",
+  "name": "Sahitya's Portfolio",
+  "icons": [
+    {
+      "src": "/assets/Logo.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/Logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#00000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}

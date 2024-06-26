@@ -160,13 +160,14 @@ a {
 
 .page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #about {
   background-color: white;
+  min-height: 100vh;
 }
 
 #home {
@@ -373,10 +374,19 @@ a {
 #about {
   flex-direction: column;
 }
+
 #about-me {
+  margin: 10px;
+  font-size: 0.9rem;
   margin-bottom: 3vh;
-  padding: 30px;
+  padding: 10px 20px;
+  /* background-color: black; */
+  /* color: white; */
+  border-radius: 10px;
+  width: 50%;
+  min-width: 340px;
 }
+
 #skills {
   /* height: 60vh; */
   width: 60vw;
@@ -386,6 +396,7 @@ a {
   flex-wrap: wrap;
 }
 .skill-box {
+  font-size: 0.9rem;
   height: 2rem;
   width: 7rem;
   margin: 1vw;
@@ -440,11 +451,13 @@ a {
   background-color: white;
   color: black;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   position: relative;
 }
 #contact-form {
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
   display: flex;
   flex-direction: column;
   /* flex-wrap: wrap; */
@@ -461,7 +474,7 @@ a {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: top;
+  /* padding: top; */
 }
 #contact-name {
   width: 300px;
@@ -579,8 +592,11 @@ textarea.invalid::placeholder {
   font-size: 2rem;
 }
 #footer-container {
-  margin-top: auto;
-  width: 100%;
+  /* margin-top: auto; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -593,6 +609,7 @@ textarea.invalid::placeholder {
 }
 
 #contact-head-container{
+  margin-bottom: 1rem;
   overflow: hidden;
 }
 
